@@ -34,7 +34,7 @@ class UserViewModelTest{
         taskUserViewModel.addUser(p)
 
         //THEN
-        val value = taskUserViewModel.auxUserTestUnitario.getOrAwaitValue()
+        val value = taskUserViewModel.auxUserTestUnitary.getOrAwaitValue()
         assertThat(value, (not(nullValue())))
     }
 

@@ -14,9 +14,9 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
     val readAllData: LiveData<List<User>>
     val repository: UserRepository
 
-    //For Test
-    val _auxUserTestUnitario = MutableLiveData<User>()
-    val auxUserTestUnitario: LiveData<User> = _auxUserTestUnitario
+    //For Test Unitary
+    val _auxUserTestUnitary = MutableLiveData<User>()
+    val auxUserTestUnitary: LiveData<User> = _auxUserTestUnitary
 
     init {
         var userDao = UserDatabase.getDataBase(application).userDao()
@@ -28,8 +28,8 @@ class UserViewModel(application: Application): AndroidViewModel(application) {
         viewModelScope.launch(Dispatchers.IO) {
             repository.addUser(user)
 
-            //abaixo para test
-            _auxUserTestUnitario?.value = user
+            //Below to test
+            //_auxUserTestUnitario?.value = user
         }
     }
 
