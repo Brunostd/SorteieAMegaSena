@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/moise/AndroidStudioProjects/Usuarios/app/src/main/res/drawable/background_circle.xml" value="0.196" />
+        <entry key="..\:/Users/moise/AndroidStudioProjects/Usuarios/app/src/main/res/drawable/delete_background_rounded.xml" value="0.195" />
+        <entry key="..\:/Users/moise/AndroidStudioProjects/Usuarios/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/moise/AndroidStudioProjects/Usuarios/app/src/main/res/layout/delete_all.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/moise/AndroidStudioProjects/Usuarios/app/src/main/res/layout/delete_play.xml" value="0.358695652173913" />
+        <entry key="..\:/Users/moise/AndroidStudioProjects/Usuarios/app/src/main/res/layout/fragment_delete.xml" value="0.25" />
+        <entry key="..\:/Users/moise/AndroidStudioProjects/Usuarios/app/src/main/res/layout/fragment_home.xml" value="0.25" />
+        <entry key="..\:/Users/moise/AndroidStudioProjects/Usuarios/app/src/main/res/layout/lista_usuarios.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/moise/AndroidStudioProjects/Usuarios/app/src/main/res/layout/number_drawm_create_success.xml" value="0.18802083333333333" />
+        <entry key="..\:/Users/moise/AndroidStudioProjects/Usuarios/app/src/main/res/xml/network_security_config.xml" value="0.18802083333333333" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
