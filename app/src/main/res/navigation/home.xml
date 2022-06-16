@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.usuarios.ui.fragments.home.HomeFragment"
+        android:name="com.denysorteie.usuarios.ui.fragments.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/deleteFragment"
-        android:name="com.example.usuarios.ui.fragments.delete.DeleteFragment"
+        android:name="com.denysorteie.usuarios.ui.fragments.delete.DeleteFragment"
         android:label="fragment_delete"
         tools:layout="@layout/fragment_delete" >
 
@@ -27,7 +27,7 @@
             app:popUpToInclusive="true" />
         <argument
             android:name="userDelete"
-            app:argType="com.example.usuarios.data.User"
+            app:argType="com.denysorteie.usuarios.data.User"
             app:nullable="true" />
         <argument
             android:name="numberDelete"

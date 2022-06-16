@@ -1,4 +1,4 @@
-package com.example.usuarios.data
+package com.denysorteie.usuarios.data
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

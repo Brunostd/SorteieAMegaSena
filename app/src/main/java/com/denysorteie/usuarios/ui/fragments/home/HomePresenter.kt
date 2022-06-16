@@ -1,6 +1,7 @@
-package com.example.usuarios.ui.fragments.home
+package com.denysorteie.usuarios.ui.fragments.home
 
-import com.example.usuarios.data.User
+import android.view.View
+import com.denysorteie.usuarios.data.User
 import java.text.SimpleDateFormat
 import java.util.*
 
@@ -19,5 +20,15 @@ class HomePresenter: HomeContract.Presenter {
         user.numberFive = (1..60).random()
         user.numberSix = (1..60).random()
         view.addUser(user)
+    }
+
+    override fun checkList(lista: List<User>) {
+        if (lista.isNotEmpty()){
+            view.showCleanList(View.VISIBLE)
+            view.showListEmpty(View.INVISIBLE)
+        } else{
+            view.showCleanList(View.INVISIBLE)
+            view.showListEmpty(View.VISIBLE)
+        }
     }
 }

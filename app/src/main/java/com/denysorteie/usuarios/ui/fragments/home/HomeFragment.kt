@@ -1,34 +1,30 @@
-package com.example.usuarios.ui.fragments.home
+package com.denysorteie.usuarios.ui.fragments.home
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.get
-import com.example.usuarios.R
-import com.example.usuarios.adapter.ListUserAdapter
-import com.example.usuarios.data.User
-import com.example.usuarios.databinding.FragmentHomeBinding
-import com.example.usuarios.viewmodel.UserViewModel
+import com.denysorteie.usuarios.R
+import com.denysorteie.usuarios.adapter.ListUserAdapter
+import com.denysorteie.usuarios.data.User
+import com.denysorteie.usuarios.databinding.FragmentHomeBinding
+import com.denysorteie.usuarios.viewmodel.UserViewModel
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class HomeFragment : Fragment(), HomeContract.View {
     private var _binding: FragmentHomeBinding? = null
     // This property is only valid between onCreateView and
     // onDestroyView.
     private val binding get() = _binding!!
-    private lateinit var viewModel: UserViewModel
+    private val viewModel: UserViewModel by viewModel()
     private val presenter = HomePresenter()
     private var p = User(0,0,0,0,0, 0, 0, "")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this).get()
         presenter.view = this
     }
 
@@ -60,15 +56,19 @@ class HomeFragment : Fragment(), HomeContract.View {
     fun setRecycler(){
         viewModel.readAllData.observe(viewLifecycleOwner, Observer { lista ->
             binding.recyclerUsuarios.adapter = ListUserAdapter(lista)
-
-            if (lista.isNotEmpty()){
-                binding.textViewCleanList.visibility = View.VISIBLE
-                binding.textViewEmpty.visibility = View.INVISIBLE
-            } else{
-                binding.textViewEmpty.visibility = View.VISIBLE
-                binding.textViewCleanList.visibility = View.INVISIBLE
-            }
+            presenter.checkList(lista)
         })
+    }
+    override fun addUser(user: User) {
+        viewModel.addUser(user)
+    }
+
+    override fun showCleanList(visibility: Int) {
+        binding.textViewCleanList.visibility = visibility
+    }
+
+    override fun showListEmpty(visibility: Int) {
+        binding.textViewEmpty.visibility = visibility
     }
 
     fun dialogDeleteAllUsers(){
@@ -105,9 +105,5 @@ class HomeFragment : Fragment(), HomeContract.View {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
-    }
-
-    override fun addUser(user: User) {
-        viewModel.addUser(user)
     }
 }

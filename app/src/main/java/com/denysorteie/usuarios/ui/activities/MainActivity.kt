@@ -1,8 +1,8 @@
-package com.example.usuarios.ui.activities
+package com.denysorteie.usuarios.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.usuarios.R
+import com.denysorteie.usuarios.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

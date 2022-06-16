@@ -1,4 +1,4 @@
-package com.example.usuarios
+package com.denysorteie.usuarios
 
 import org.junit.Test
 

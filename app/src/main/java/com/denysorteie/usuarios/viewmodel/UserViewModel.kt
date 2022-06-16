@@ -1,11 +1,11 @@
-package com.example.usuarios.viewmodel
+package com.denysorteie.usuarios.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
-import com.example.usuarios.data.*
+import com.denysorteie.usuarios.data.*
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

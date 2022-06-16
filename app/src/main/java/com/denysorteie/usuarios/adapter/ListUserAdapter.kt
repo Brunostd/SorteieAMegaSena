@@ -1,14 +1,12 @@
-package com.example.usuarios.adapter
+package com.denysorteie.usuarios.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.navigation.findNavController
-import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.example.usuarios.R
-import com.example.usuarios.data.User
-import com.example.usuarios.databinding.ListaUsuariosBinding
-import com.example.usuarios.ui.fragments.home.HomeFragmentDirections
+import com.denysorteie.usuarios.data.User
+import com.denysorteie.usuarios.databinding.ListaUsuariosBinding
+import com.denysorteie.usuarios.ui.fragments.home.HomeFragmentDirections
 
 class ListUserAdapter(var listaUser: List<User>): RecyclerView.Adapter<ListUserAdapter.MyViewHolder>() {
     class MyViewHolder(private val itemBinding: ListaUsuariosBinding): RecyclerView.ViewHolder(itemBinding.root){

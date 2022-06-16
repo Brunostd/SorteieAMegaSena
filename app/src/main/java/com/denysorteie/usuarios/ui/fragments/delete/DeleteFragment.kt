@@ -1,4 +1,4 @@
-package com.example.usuarios.ui.fragments.delete
+package com.denysorteie.usuarios.ui.fragments.delete
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,11 +9,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.get
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.example.usuarios.R
-import com.example.usuarios.data.User
-import com.example.usuarios.databinding.FragmentDeleteBinding
-import com.example.usuarios.viewmodel.UserViewModel
+import com.denysorteie.usuarios.R
+import com.denysorteie.usuarios.data.User
+import com.denysorteie.usuarios.databinding.FragmentDeleteBinding
+import com.denysorteie.usuarios.viewmodel.UserViewModel
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import org.koin.androidx.viewmodel.ext.android.viewModel
 
 class DeleteFragment : Fragment() {
     private var _binding: FragmentDeleteBinding? = null
@@ -21,12 +22,7 @@ class DeleteFragment : Fragment() {
     // onDestroyView.
     private val binding get() = _binding!!
     private val args: DeleteFragmentArgs by navArgs()
-    private lateinit var viewModel: UserViewModel
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        viewModel = ViewModelProvider(this).get()
-    }
+    private val viewModel: UserViewModel by viewModel()
 
     override fun onCreateView(
         inflater: LayoutInflater,
