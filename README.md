@@ -10,3 +10,4 @@
 - Lottie API para animações
 - Testes unitários com JUnit 4 e roboletric
 - Room DataBase
+- Talvez eu possar ter esquecido alguma outra tecnologia, então de uma olhadinha no projeto.
